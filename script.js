@@ -80,6 +80,7 @@ setupImageSwitcher("cologne", [
 
 setupImageSwitcher("undershirt", [
   "images/shirt/uniqlo_white_longsleeve.png",
+  "images/shirt/uw_shirt.png",
   "images/shirt/messi.png"
 ]);
 
