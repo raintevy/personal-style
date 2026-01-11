@@ -75,7 +75,8 @@ setupImageSwitcher("jacket", [
 
 setupImageSwitcher("cologne", [
   "images/cologne/valentino.png",
-  "images/cologne/dior.png"
+  "images/cologne/dior.png",
+  "images/cologne/ysl.png"
 ]);
 
 setupImageSwitcher("undershirt", [
