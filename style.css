@@ -1,37 +1,42 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kadwa:wght@400;700&display=swap');
 
-:root {
-  --text: #000;
-  --bg: #fff;
-  --border: #ddd;
+:root{
+  --text:#000;
+  --bg:#fff;
+  --border:#ddd;
+
+  /* sizing knobs */
+  --sideSize: 220px;     /* accessory/cologne/undershirt/ring */
+  --jacketSize: 350px;   /* center jacket */
+  --pantsSize: 350px;    /* pants */
 }
 
-body.dark {
-  --text: #fff;
-  --bg: #000;
-  --border: #444;
+body.dark{
+  --text:#fff;
+  --bg:#000;
+  --border:#444;
 }
 
-body.dark .dropdown-menu {
-  box-shadow: 0 4px 12px rgba(255,255,255,0.05);
+body.dark .dropdown-menu{
+  box-shadow:0 4px 12px rgba(255,255,255,0.05);
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
 }
 
-html {
-  font-family: "Inter", sans-serif;
+html{
+  font-family:"Inter", sans-serif;
 }
 
-body {
-  background: var(--bg);
-  color: var(--text);
-  padding: 1em;
+body{
+  background:var(--bg);
+  color:var(--text);
+  padding:1em;
 }
-
 
 header {
   position: sticky;
@@ -40,95 +45,219 @@ header {
   background: var(--bg);
 }
 
-
-/* ---------- navigation bar ---------- */
-
-nav > ul {
-  display: flex;
-  align-items: center;
-  list-style: none;
-  gap: 3em;
-  padding: 20px 40px;
-  font-size: 1.1rem;
+/* ---------- navigation bar (stays Inter) ---------- */
+nav > ul{
+  display:flex;
+  align-items:center;
+  list-style:none;
+  gap:3em;
+  padding:20px 40px;
+  font-size:1.1rem;
 }
 
-nav li:first-child {
-  margin-right: auto;
+nav li:first-child{ margin-right:auto; }
+
+nav a{
+  text-decoration:none;
+  color:inherit;
 }
 
-nav a {
-  text-decoration: none;
-  color: inherit;
+.toggle{
+  margin-top:3px;
+  cursor:pointer;
 }
-
-.toggle {
-  margin-top: 3px;
-  cursor: pointer;
-}
-
-.toggle:hover {
-  text-decoration: underline;
-}
+.toggle:hover{ text-decoration:underline; }
 
 /* dropdown container */
-.dropdown {
-  position: relative;
-}
+.dropdown{ position:relative; }
 
 /* dropdown menu */
-.dropdown-menu {
-  position: absolute;
-  top: 100%;
-  left: 0;
+.dropdown-menu{
+  position:absolute;
+  top:100%;
+  left:0;
 
-  display: none;
-  flex-direction: column;
+  display:none;
+  flex-direction:column;
 
-  list-style: none;
-  padding-top: 0.8em;   
-  padding-right: 0.8em;
-  padding-bottom: 0.8em;
-  padding-left: 0.8em;
-  margin: 0;
+  list-style:none;
+  padding:0.8em;
+  margin:0;
 
-  background: var(--bg);
-  color: var(--text);
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  background:var(--bg);
+  color:var(--text);
+  border:1px solid var(--border);
+  border-radius:8px;
+  box-shadow:0 4px 12px rgba(0,0,0,0.08);
 
-  min-width: 160px;
-  z-index: 1000;
+  min-width:160px;
+  z-index:1000;
 
-  gap: 0.25em;
-
-  align-items: flex-start;
+  gap:0.25em;
+  align-items:flex-start;
 }
 
-/* OPEN menu on hover (mouse) */
-.dropdown:hover .dropdown-menu {
-  display: flex;
-}
-
-/* OPEN menu when tabbing into it (keyboard) */
-.dropdown:focus-within .dropdown-menu {
-  display: flex;
-}
+.dropdown:hover .dropdown-menu{ display:flex; }
+.dropdown:focus-within .dropdown-menu{ display:flex; }
 
 .dropdown-menu a:hover,
-.dropdown-menu a:focus {
-  text-decoration: underline;
+.dropdown-menu a:focus{ text-decoration:underline; }
+
+.dropdown-menu li{ margin:0; padding:0; }
+
+.dropdown-menu a{
+  display:block;
+  padding:0.15em 0.25em;
+  line-height:1.2;
 }
 
-/* RESET dropdown list items */
-.dropdown-menu li {
-  margin: 0;
-  padding: 0;
+/* ---------- style page ---------- */
+.style-page{
+  min-height:100vh;
+  padding:3rem 2rem;
+  background:var(--bg);
+  color:var(--text);
+
+  /* everything here is Kadwa */
+  font-family:"Kadwa", serif;
 }
 
-/* TIGHT clickable links */
-.dropdown-menu a {
-  display: block;
-  padding: 0.15em 0.25em;
-  line-height: 1.2;
+.title{
+  text-align:center;
+  margin-bottom:2.5rem;
+}
+
+.title h1{
+  font-size:clamp(2.2rem, 4vw, 3.2rem);
+  margin:0;
+  font-weight:700;
+}
+
+.title p{
+  margin:0.5rem 0 0;
+  font-size:1.4rem;
+  opacity:0.75;
+  font-weight:400;
+}
+
+/* MAIN LAYOUT */
+.dress-grid{
+  max-width:1100px;
+  margin-left: 7rem;
+  margin-right: auto;
+
+  display:grid;
+  gap:3rem 4rem;
+
+  grid-template-columns:1fr 1.2fr 1fr;
+  grid-template-rows:auto auto auto;
+
+  grid-template-areas:
+    "accessory jacket cologne"
+    "undershirt jacket ring"
+    ". pants .";
+}
+
+.slot{
+  position:relative;
+  display:grid;
+  place-items:center;
+  text-align:center;
+  min-height:240px;
+}
+
+.slot h3{
+  margin:0 0 0.8rem;
+  font-size:1.35rem;
+  font-weight:700;
+}
+
+/* DEFAULT IMAGE BOX (side items) */
+.slot img{
+  width:var(--sideSize);
+  height:var(--sideSize);
+
+  object-fit:contain;
+  object-position:center;
+
+  display:block;
+  user-select:none;
+  -webkit-user-drag:none;
+}
+
+/* BIG CENTER ITEMS: override BOTH width + height */
+/* Jacket image sizing */
+.jacket img {
+  max-width: 300px;     /* ← controls how big it appears */
+  width: auto;          /* ← stops stretching */
+  height: auto;
+
+  object-fit: contain;
+  transform: translateY(-40px);
+}
+
+.pants img{
+  width:var(--pantsSize);
+  height:var(--pantsSize);
+  transform: translateY(20px);
+}
+
+/* TILT SIDE ITEMS (rotate only) */
+.accessory img  { transform: rotate(-10deg); }
+.cologne img    { transform: rotate(10deg); }
+.undershirt img { transform: rotate(-8deg); }
+.ring img       { transform: rotate(8deg); }
+
+/* arrows */
+.arrow{
+  position:absolute;
+  top:55%;
+  transform:translateY(-50%);
+  border:none;
+  background:transparent;
+  font-size:2.4rem;
+  line-height:1;
+  cursor:pointer;
+  padding:0.25rem 0.5rem;
+  opacity:0.85;
+  color:inherit;
+}
+
+.arrow:hover{ opacity:1; }
+
+.arrow.left{ left:-1.3rem; }
+.arrow.right{ right:-1.3rem; }
+
+/* grid areas */
+.accessory{ grid-area:accessory; }
+.jacket{ grid-area:jacket; }
+.cologne{ grid-area:cologne; }
+.undershirt{ grid-area:undershirt; }
+.pants{ grid-area:pants; }
+.ring{ grid-area:ring; }
+
+/* responsive */
+@media (max-width: 950px){
+  :root{
+    --sideSize: 200px;
+    --jacketSize: 360px;
+    --pantsSize: 320px;
+  }
+}
+
+@media (max-width: 850px){
+  .dress-grid{
+    grid-template-columns:1fr 1fr;
+    grid-template-areas:
+      "jacket jacket"
+      "accessory cologne"
+      "undershirt ring"
+      "pants pants";
+  }
+
+  .arrow.left{ left:-0.6rem; }
+  .arrow.right{ right:-0.6rem; }
+
+  .jacket img{ transform: translateY(-16px); }
+  .pants img{ transform: translateY(-10px); }
 }
