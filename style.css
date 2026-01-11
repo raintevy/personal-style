@@ -196,11 +196,21 @@ nav a{
   transform: translateY(-40px);
 }
 
-.pants img{
+.pants {
+  transform: translateY(-90px);
+}
+
+.pants img {
   width:var(--pantsSize);
   height:var(--pantsSize);
-  transform: translateY(20px);
 }
+
+.ring img {
+  width: 130px;
+  height: 130px;
+}
+
+
 
 /* TILT SIDE ITEMS (rotate only) */
 .accessory img  { transform: rotate(-10deg); }

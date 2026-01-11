@@ -79,17 +79,18 @@ setupImageSwitcher("cologne", [
 ]);
 
 setupImageSwitcher("undershirt", [
-  "images/shirt/uniqlo_white_longsleeve.png"
-  // "images/shirt/another_shirt.png",
+  "images/shirt/uniqlo_white_longsleeve.png",
+  "images/shirt/messi.png"
 ]);
 
 setupImageSwitcher("pants", [
-  "images/pants/grey_jeans.png"
-  // "images/pants/another_pants.png",
+  "images/pants/grey_jeans.png",
+  "images/pants/gap_blue.png"
 ]);
 
 setupImageSwitcher("ring", [
-  "images/jewelry/mejuri_ring.png"
-  // "images/jewelry/another_ring.png",
+  "images/jewelry/mejuri_ring.png",
+  "images/jewelry/mejuri_swirl.png",
+  "images/jewelry/vivienne.png"
 ]);
 
