@@ -216,7 +216,7 @@ nav a{
 .accessory img  { transform: rotate(-10deg); }
 .cologne img    { transform: rotate(10deg); }
 .undershirt img { transform: rotate(-8deg); }
-.ring img       { transform: rotate(8deg); }
+.ring img       { transform: rotate(-20deg); }
 
 /* arrows */
 .arrow{

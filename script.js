@@ -81,7 +81,10 @@ setupImageSwitcher("jacket", [
 setupImageSwitcher("cologne", [
   "images/cologne/valentino.png",
   "images/cologne/dior.png",
-  "images/cologne/ysl.png"
+  "images/cologne/ysl.png",
+  "images/cologne/burberry.png",
+  "images/cologne/cobalt.png",
+  "images/cologne/spicebomb.png"
 ]);
 
 setupImageSwitcher("undershirt", [
@@ -92,12 +95,13 @@ setupImageSwitcher("undershirt", [
 
 setupImageSwitcher("pants", [
   "images/pants/grey_jeans.png",
-  "images/pants/gap_blue.png"
+  "images/pants/gap_blue.png",
 ]);
 
 setupImageSwitcher("ring", [
   "images/jewelry/mejuri_ring.png",
   "images/jewelry/mejuri_swirl.png",
-  "images/jewelry/vivienne.png"
+  "images/jewelry/nicoles_ring.png",
+  //"images/jewelry/vivienne.png"
 ]);
 
