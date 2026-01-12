@@ -188,7 +188,7 @@ nav a{
 /* BIG CENTER ITEMS: override BOTH width + height */
 /* Jacket image sizing */
 .jacket img {
-  max-width: 300px;     /* ← controls how big it appears */
+  max-width: 330px;     /* ← controls how big it appears */
   width: auto;          /* ← stops stretching */
   height: auto;
 

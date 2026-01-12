@@ -70,12 +70,14 @@ function setupImageSwitcher(slotClass, images) {
 
 setupImageSwitcher("accessory", [
   "images/accessory/chain_wallet.png",
-  "images/accessory/seiko.png"
+  "images/accessory/seiko.png",
+"images/accessory/uniqlo_scarf.png",
 ]);
 
 setupImageSwitcher("jacket", [
   "images/jacket/uniqlo_puffer.png",
-  "images/jacket/wolverine_jacket.png"
+  "images/jacket/wolverine_jacket.png",
+  "images/jacket/uw_sweater.png"
 ]);
 
 setupImageSwitcher("cologne", [
@@ -90,18 +92,23 @@ setupImageSwitcher("cologne", [
 setupImageSwitcher("undershirt", [
   "images/shirt/uniqlo_white_longsleeve.png",
   "images/shirt/uw_shirt.png",
+  "images/shirt/dawg_daze.png"
   //"images/shirt/messi.png"
 ]);
 
 setupImageSwitcher("pants", [
   "images/pants/grey_jeans.png",
   "images/pants/gap_blue.png",
+  "images/pants/pajama_pants.png"
 ]);
 
 setupImageSwitcher("ring", [
   //"images/jewelry/mejuri_ring.png",
   "images/jewelry/mejuri_swirl.png",
   "images/jewelry/nicoles_ring.png",
+  "images/jewelry/tinas_ring.png",
+  "images/jewelry/vines.png",
+  "images/jewelry/constellations.png"
   //"images/jewelry/vivienne.png"
 ]);
 
