@@ -39,10 +39,15 @@ function setupImageSwitcher(slotClass, images) {
   const nextBtn = slot.querySelector(".arrow.right");
   if (!img || !prevBtn || !nextBtn) return;
 
-  let index = 0;
+  const storageKey = `fit:${slotClass}`;
+
+  // load saved index (if any)
+  let index = parseInt(localStorage.getItem(storageKey), 10);
+  if (Number.isNaN(index) || index < 0 || index >= images.length) index = 0;
 
   function update() {
     img.src = images[index];
+    localStorage.setItem(storageKey, index); // save every time
   }
 
   nextBtn.addEventListener("click", () => {
@@ -55,9 +60,9 @@ function setupImageSwitcher(slotClass, images) {
     update();
   });
 
-  // Optional: ensure it starts on the first one in your list
-  update();
+  update(); // set initial image + persist
 }
+
 
 // ================================
 // Your image lists (edit these)
