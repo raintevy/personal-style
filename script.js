@@ -90,7 +90,7 @@ setupImageSwitcher("cologne", [
 setupImageSwitcher("undershirt", [
   "images/shirt/uniqlo_white_longsleeve.png",
   "images/shirt/uw_shirt.png",
-  "images/shirt/messi.png"
+  //"images/shirt/messi.png"
 ]);
 
 setupImageSwitcher("pants", [
@@ -99,7 +99,7 @@ setupImageSwitcher("pants", [
 ]);
 
 setupImageSwitcher("ring", [
-  "images/jewelry/mejuri_ring.png",
+  //"images/jewelry/mejuri_ring.png",
   "images/jewelry/mejuri_swirl.png",
   "images/jewelry/nicoles_ring.png",
   //"images/jewelry/vivienne.png"
